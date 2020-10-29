@@ -23,4 +23,30 @@ router.route('/add').post((req, res) => {
 		.catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id').get((req, res) => {
+	History.findById(req.params.id)
+		.then(history => res.json(history))
+		.catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/:id').delete((req, res) => {
+	History.findByIdAndDelete(req.params.id)
+		.then(() => res.json('History entry deleted.'))
+		.catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/:id').post((req, res) => {
+	History.findById(req.params.id)
+		.then(history => {
+			history.language = req.body.language;
+			history.input = req.body.input;
+			history.translation = req.body.translation;
+
+			history.save()
+				.then(() => res.json('History updated successfully'))
+				.catch(err => res.status(400).json('Error: ' + err));
+		})
+		.catch(err => res.status(400).json('Error: ' + err));
+});
+
 module.exports = router;
