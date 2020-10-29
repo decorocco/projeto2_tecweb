@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import logo from './images/jarjar.jpg';
 import './App.css';
 
 function App() {
+
+  //YODA SPEAK
+
+  // const axios = require("axios");
+  // axios({
+  //   "method":"POST",
+  //   "url":"https://yodish.p.rapidapi.com/yoda.json",
+  //   "headers":{
+  //   "content-type":"application/x-www-form-urlencoded",
+  //   "x-rapidapi-host":"yodish.p.rapidapi.com",
+  //   "x-rapidapi-key":"f02d5d9c58msh98e1232364bea64p1377b9jsn3a10ac06aeb7",
+  //   "useQueryString":true
+  //   },"params":{
+  //   "text":"Master Obiwan has lost a planet."
+  //   },"data":{
+    
+  //   }
+  //   })
+  //   .then((response)=>{
+  //     console.log(response.data.contents.translated)
+  //   })
+  //   .catch((error)=>{
+  //     console.log(error)
+  //   })
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Useless Language Translator
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <a>
+          Klingon, Elvish, Jar Jar, Yoda, Sith, Dothraki, Minion 
         </a>
       </header>
     </div>
   );
+
 }
 
 export default App;
