@@ -1,5 +1,12 @@
 import logo from './images/jarjar.jpg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Navbar from "./components/navbar.component";
+import Home from "./components/home.component";
+import HistoryList from "./components/historylist.component";
+import About from "./components/about.component";
 
 function App() {
 
@@ -52,17 +59,13 @@ function App() {
   //   })
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Useless Language Translator
-        </p>
-        <a>
-          Klingon, Elvish, Jar Jar, Yoda, Sith, Dothraki, Minion
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <br/>
+      <Route path='/' exact component={Home} />
+      <Route path='/history' component={HistoryList} />
+      <Route path='/about' component={About} />
+    </Router>
   );
 
 }
