@@ -49,7 +49,7 @@ export default class HistoryList extends Component {
 					</thead>
 					<tbody>
 						{ this.historyList() }
-					</tbody> 
+					</tbody>
 				</table>
 			</div>
 		)
