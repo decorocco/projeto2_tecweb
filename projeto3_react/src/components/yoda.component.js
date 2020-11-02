@@ -3,6 +3,16 @@ import '../yoda.css';
 import yoda from '../images/yodaicon300.png';
 import axios from 'axios';
 
+var options = {
+    method: 'POST',
+    url: 'https://rapidapi.p.rapidapi.com/yoda.json',
+    params: {text: 'Master Obiwan has lost a planet.'},
+    headers: {
+      'x-rapidapi-key': 'f02d5d9c58msh98e1232364bea64p1377b9jsn3a10ac06aeb7',
+      'x-rapidapi-host': 'yodish.p.rapidapi.com'
+    }
+  };
+
 export default class Yoda extends Component {
 
     constructor(props) {
@@ -25,32 +35,28 @@ export default class Yoda extends Component {
     
     onClickTranslate(e) {
 
-        axios.post(
-            "https://yodish.p.rapidapi.com/yoda.json",
-            { "headers": {
-                "content-type":"application/x-www-form-urlencoded",
-                "x-rapidapi-host":"yodish.p.rapidapi.com",
-                "x-rapidapi-key":"f02d5d9c58msh98e1232364bea64p1377b9jsn3a10ac06aeb7",
-                "useQueryString":true 
-            },
-            "params":{
-                "text": this.state.text
-            },
-            "data": {
-                
-            }
-            })
+        axios.post("https://yodish.p.rapidapi.com/yoda.json",
+        {text: (this.state.text)
+        }, {headers: {
+            'x-rapidapi-key': 'f02d5d9c58msh98e1232364bea64p1377b9jsn3a10ac06aeb7',
+            'x-rapidapi-host': 'yodish.p.rapidapi.com'
+        }})
         .then((response)=>{
-            this.setState.translation(response.data.contents.translated)
-            console.log(response.data.contents.translated)
+            this.setState({
+                translation: (response.data.contents.translated)
+            });
+            console.log(response.data.contents.translated);
+            axios.post("http://localhost:5000/history/add/", {
+                language: "Yoda", input: this.state.text, translation: this.state.translation
+            })
         })
         .catch((error)=> {
             console.log(error)
         })
 
-    //  this.setState({
-    //      text: ''
-    //  })
+        // this.setState({
+        //     text: ''
+        // })
     }
 
 	render() {

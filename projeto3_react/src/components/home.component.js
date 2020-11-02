@@ -30,7 +30,7 @@ export default class Home extends Component {
 						
 						
 						<a class = "linkp">
-							<Link to={"/klingon/"}>
+							<Link to={"/pirate/"}>
 								<img src={kinglon} className="App-logo" alt="logo" />
 							</Link>
 						</a>
