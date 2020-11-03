@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../pirate.css'
+import '../style/pirate.css'
 import axios from 'axios'
 
 export default class About extends Component {
@@ -21,7 +21,7 @@ export default class About extends Component {
             text: e.target.value
         });
     }
-    
+
     onClickTranslate(e) {
         axios.post('https://rapidapi.p.rapidapi.com/pirate.json',
         {text: (this.state.text)

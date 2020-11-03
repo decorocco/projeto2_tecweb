@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../drogo.css'
+import '../style/drogo.css'
 import axios from 'axios';
 
 

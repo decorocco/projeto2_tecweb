@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../valyrian.css'
+import '../style/valyrian.css'
 import axios from 'axios'
 
 export default class About extends Component {

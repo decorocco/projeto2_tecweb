@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../elvish.css'
+import '../style/elvish.css'
 import axios from 'axios'
 
 export default class About extends Component {

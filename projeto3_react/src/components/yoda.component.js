@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../yoda.css';
+import '../style/yoda.css';
 import axios from 'axios';
 
 export default class Yoda extends Component {

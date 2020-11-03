@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../home.css'
+import '../style/home.css'
 import minion from '../images/minionicon300.png'
 import pirate from '../images/pirateicon300.png'
 import yoda from '../images/yodaicon300.png'

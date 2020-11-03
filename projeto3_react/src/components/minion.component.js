@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../minion.css'
+import '../style/minion.css'
 import axios from 'axios'
 
 export default class About extends Component {
