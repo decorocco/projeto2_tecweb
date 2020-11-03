@@ -35,7 +35,7 @@ export default class About extends Component {
             });
             console.log(response.data.contents.translated);
             axios.post("http://localhost:5000/history/add/", {
-                language: "Pirate Speak", input: this.state.text, translation: this.state.translation
+                language: "Valyrian", input: this.state.text, translation: this.state.translation
             })
         })
         .catch((error)=> {
