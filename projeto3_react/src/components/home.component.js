@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../home.css'
-import jarjar from '../images/jarjaricon300.jpg'
-import kinglon from '../images/klingonicon300.png'
+import minion from '../images/minionicon300.png'
+import pirate from '../images/pirateicon300.png'
 import yoda from '../images/yodaicon300.png'
-import wookie from '../images/wookieicon300.png'
+import valiryan from '../images/valyrianicon300.png'
 import drogo from '../images/drogoicon300.png'
-import maul from '../images/maulicon300.png'
+import elvish from '../images/elficon300.png' 
 
 export default class Home extends Component {
 	render() {
@@ -31,20 +31,20 @@ export default class Home extends Component {
 						
 						<a class = "linkp">
 							<Link to={"/pirate/"}>
-								<img src={kinglon} className="App-logo" alt="logo" />
+								<img src={pirate} className="App-logo" alt="logo" />
 							</Link>
 						</a>
-						Klingon
+						Pirate Speak
 					</div>
 					<div class="column"> 
 						
 						
 						<a class = "linkp">
-							<Link to={"/wookie/"}>
-									<img src={wookie} className="App-logo" alt="logo" />
+							<Link to={"/valyrian/"}>
+									<img src={valiryan} className="App-logo" alt="logo" />
 							</Link>
 						</a>
-						Wookie
+						Valyrian
 					</div>
 						
 				</div>
@@ -54,11 +54,11 @@ export default class Home extends Component {
 					
 							
 						<a class = "linkp">
-							<Link to={"/sith/"}>
-								<img src={maul} className="App-logo" alt="logo" /> 
+							<Link to={"/elvish/"}>
+								<img src={elvish} className="App-logo" alt="logo" /> 
 							</Link>
 						</a>
-						Sith
+						Elvish
 
 					</div>
 
@@ -77,11 +77,11 @@ export default class Home extends Component {
 						
 							
 						<a class = "linkp">
-							<Link to={"/Gungan/"}>
-								<img src={jarjar} className="App-logo" alt="logo" />
+							<Link to={"/minion/"}>
+								<img src={minion} className="App-logo" alt="logo" />
 							</Link>
 						</a>
-						Gungan
+						Minion
 
 					</div>
 

@@ -7,14 +7,13 @@ import Home from "./components/home.component";
 import HistoryList from "./components/historylist.component";
 import About from "./components/about.component";
 import yoda from "./components/yoda.component";
-import jarjar from "./components/Jarjar.component";
-import wookie from "./components/wookie.component";
-import sith from "./components/sith.component";
+import minion from "./components/minion.component";
+import valyrian from "./components/valiryan.component";
+import elvish from "./components/elvish.component";
 import pirate from "./components/pirate.component";
 import drogo from "./components/drogo.component";
 
 function App() {
-  // HISTORICO COM OUTRAS OPÇOES DE LINGUAS
   return (
     <Router>
       <Navbar />
@@ -23,9 +22,9 @@ function App() {
       <Route path='/history' component={HistoryList} />
       <Route path='/about' component={About} />
       <Route path='/yoda' component={yoda} />
-      <Route path='/gungan' component={jarjar} />
-      <Route path='/wookie' component={wookie} />
-      <Route path='/sith' component={sith} />
+      <Route path='/minion' component={minion} />
+      <Route path='/valyrian' component={valyrian} />
+      <Route path='/elvish' component={elvish} />
       <Route path='/pirate' component={pirate} />
       <Route path='/dothraki' component={drogo} />
     </Router>
