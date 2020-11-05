@@ -7,6 +7,9 @@ import yoda from '../images/yodaicon300.png'
 import valiryan from '../images/valyrianicon300.png'
 import drogo from '../images/drogoicon300.png'
 import elvish from '../images/elficon300.png' 
+import jive from '../images/jiveicon300.png' 
+import pig from '../images/pigicon300.png' 
+import swedishchef from '../images/swedishcheficon300.png' 
 
 export default class Home extends Component {
 	render() {
@@ -84,11 +87,48 @@ export default class Home extends Component {
 						Minion
 
 					</div>
+				</div>
+
+				<div class = "row">
+					<div class="column">
+					
+							
+						<a class = "linkp">
+							<Link to={"/jive/"}>
+								<img src={jive} className="App-logo" alt="logo" /> 
+							</Link>
+						</a>
+						Jive
+
+					</div>
+
+					<div class="column">
+						
+							
+						<a class = "linkp">
+							<Link to={"/swedishchef/"}> 							
+								<img src={swedishchef} className="App-logo" alt="logo" />
+							</Link>
+						</a>
+						Swedish Chef
+						
+					</div>
+					<div class="column">
+						
+							
+						<a class = "linkp">
+							<Link to={"/piglatin/"}>
+								<img src={pig} className="App-logo" alt="logo" />
+							</Link>
+						</a>
+						Pig latin
+
+					</div>
 
 				</div>
 
-
-			</div>
+		</div>
+		
 
 
 

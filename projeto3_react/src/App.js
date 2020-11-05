@@ -12,6 +12,9 @@ import valyrian from "./components/valiryan.component";
 import elvish from "./components/elvish.component";
 import pirate from "./components/pirate.component";
 import drogo from "./components/drogo.component";
+import jive from "./components/jive.component";
+import swedishchef from "./components/swedishchef.component";
+import piglatin from "./components/piglatin.component";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
       <Route path='/elvish' component={elvish} />
       <Route path='/pirate' component={pirate} />
       <Route path='/dothraki' component={drogo} />
+      <Route path='/jive' component={jive} />
+      <Route path='/swedishchef' component={swedishchef} />
+      <Route path='/piglatin' component={piglatin} />
     </Router>
   );
 
