@@ -7,6 +7,9 @@ const History = props => (
 		<td>{props.history.language}</td>
 		<td>{props.history.input}</td>
 		<td>{props.history.translation}</td>
+		<td>
+			<a href='#' onClick={() => { props.deleteExercise(props.history._id) }}>delete</a>
+		</td>
 	</tr>	
 )
 
@@ -14,9 +17,11 @@ export default class HistoryList extends Component {
 	constructor(props) {
 		super(props);
 
+		this.deleteExercise = this.deleteExercise.bind(this);
+
 		this.state = {
 			histories: []
-		}
+		};
 	}
 
 	componentDidMount() {
@@ -31,7 +36,16 @@ export default class HistoryList extends Component {
 
 	historyList() {
 		return this.state.histories.map(currenthistory => {
-			return <History history={currenthistory} key={currenthistory._id}/>;
+			return <History history={currenthistory} deleteExercise={this.deleteExercise} key={currenthistory._id}/>;
+		})
+	}
+
+	deleteExercise(id) {
+		axios.delete('http://localhost:5000/history/'+id)
+			.then(res => console.log(res.data));
+		
+		this.setState({
+			histories: this.state.histories.filter(el => el._id !== id)
 		})
 	}
 
