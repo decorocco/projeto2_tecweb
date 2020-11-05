@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import '../style/yoda.css';
 import axios from 'axios';
 
+function WordCount(str) { 
+    if  (str.replace(/\s/g,"").length == 0) {
+        return "0"
+    }
+    else{
+        return str.split(" ").length;
+    }
+    
+}
+
 export default class Yoda extends Component {
 
     constructor(props) {
@@ -15,6 +25,8 @@ export default class Yoda extends Component {
             translation: ''
         };
     }
+
+    
 
     onChangeText(e) {
         this.setState({
@@ -66,11 +78,15 @@ export default class Yoda extends Component {
                         </div>
                     </div>
                     <div class = "column1">
-                    <label for="translated">Translated Text:</label>
+                    <label for="translated">Translated Text:  </label>
+                    
                         <div class="form-group">
                             
                             <textarea class="form-control" value={this.state.translation} name="translated" id="" cols="30" rows="3">   
                             </textarea>
+                        </div>
+                        <div>
+                        <label class = "wordcount" >Word Count = {(WordCount(this.state.translation))} </label>
                         </div>
                     </div>
                 </div>

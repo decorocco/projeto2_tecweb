@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import '../style/drogo.css'
 import axios from 'axios';
 
+function WordCount(str) { 
+    if  (str.replace(/\s/g,"").length == 0) {
+        return "0"
+    }
+    else{
+        return str.split(" ").length;
+    }
+    
+}
+
 
 export default class About extends Component {
     
@@ -73,6 +83,9 @@ export default class About extends Component {
                             
                             <textarea class="form-control" value={this.state.translation} name="translated" id="" cols="30" rows="3">   
                             </textarea>
+                        </div>
+                        <div>
+                            <label class = "wordcount" >Word Count = {(WordCount(this.state.translation))} </label>
                         </div>
                     </div>
                 </div>
